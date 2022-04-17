@@ -14,6 +14,24 @@ margin-bottom: 8px;
 background-color: ${(props) => props.isHome ? '#6633cc' : '#36393f'};
 cursor: pointer;
 position: relative;
+border-radius: 50%;
 
+>img{
+    width: 24px;
+    height: 24px;
+}
+&::before{
+
+}
+&::after{
+
+transition: border-radius .2s, background-color .2s;
+
+
+}
+&.active, &.hover{
+    border-radius: 16px;
+    background-color: ${props => props.isHome ? '#6633cc' : '#6e86d6'};
+}
 
 `;
